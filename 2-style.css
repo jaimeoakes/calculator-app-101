@@ -1,0 +1,90 @@
+/* O abaixo "*" , seleciona TODOS os elementos do html: */
+* {
+    margin: 0;
+    padding: 0;
+    /* O codigo box-sizing é para que todos os 
+    elementos nao passem dos limites esteticos dos parents: */
+    box-sizing: border-box;
+    font-family: helvetica; 
+}
+
+body {
+    background-color:rgb(157, 152, 152);
+    display: flex;
+    /* Centraliza os items dentro do bloco: */
+    align-items: center;
+    /* Centraliza o bloco na pagina: */
+    justify-content: center;
+    /* Distancia o topo da pagina: */
+    padding: 3em;
+} 
+
+#calc {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: .5em;
+    background-color: #c4c4c4;
+    color: black;
+}
+
+#calc h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(88, 87, 87);
+} 
+
+#operation {
+    text-align: right;
+} 
+
+#previous-operation {
+    color:beige;
+    padding: 0.2em;
+    /* Prever a altura dos numeros. Os numero nao vazam da calculador: */
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+
+#current-operation {
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    /* Prever a altura dos numeros. Os numero nao vazam da calculador: */
+    overflow-wrap: break-word;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    /* mostrar o ponteiro do mouse: */
+    cursor: pointer;
+}
+
+#buttons-container .number {
+    background-color: #f3f3f3;
+}
+
+#buttons-container button:hover {
+    background-color: #bababa ;
+    border-color: #999;
+}
+
+#buttons-container #equal-btn {
+    grid-column: span 2;
+    background-color: #75a5cb ;
+}
+
+#buttons-container #equal-btn:hover {
+    background-color: #3a91d8 ;
+}
